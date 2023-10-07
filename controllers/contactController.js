@@ -9,10 +9,10 @@ const serviceAccount = require("./../serviceAccountKey.json");
 
 const fireAdmin = firebaseAdmin.initializeApp({
   credential: firebaseAdmin.credential.cert(serviceAccount),
-  storageBucket: process.env.FIREBASE_STORAGE,
+  storageBucket: "gs://my-first-project-77b03.appspot.com",
 });
 
-const storageRef = fireAdmin.storage().bucket(process.env.FIREBASE_STORAGE);
+const storageRef = fireAdmin.storage().bucket("gs://my-first-project-77b03.appspot.com");
 
 async function uploadFile(path, filename) {
   
